@@ -3,7 +3,7 @@
 If you want to install this project on your computer you need to copy this project
 
 ```bash
-git clone https://github.com/InkSmile/Junior-FullStack-project.git
+git clone https://github.com/InkSmile/RestApi_COI.git
 ```
 Then you need to install [Docker](https://docs.docker.com/engine/install/)
 
