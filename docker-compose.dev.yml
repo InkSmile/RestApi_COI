@@ -1,0 +1,22 @@
+version: '3'
+services:
+  # mysql:
+  #   image: mysql:5.7
+  #   restart: always
+  #   ports:
+  #     - 3306:3306
+  #   env_file:
+  #     - .env
+  #   volumes:
+  #     - ./db/:/var/run/mysqld/
+  #   container_name: mysql_db
+
+  postgres:
+    image: postgres:12.3
+    restart: always
+    ports:
+      - 5544:5432
+    env_file:
+      - .env
+    volumes:
+      - ./data/postgres:/var/lib/postgres/data

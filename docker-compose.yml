@@ -1,0 +1,21 @@
+version: '3'
+services:
+  api:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - ./assets:/app/assets
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:12.3
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - 5543:5432
+    volumes:
+      - ./data/postgres:/var/lib/postgres/data
